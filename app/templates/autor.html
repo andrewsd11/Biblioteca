@@ -11,27 +11,19 @@
 
 <div class="container mt-5">
 <button class="btn btn-warning mt-5" onclick="window.location.href='/admin/'">Django Admin</button>
-    <h1 class="text-center">Livros</h1>
+    <h1 class="text-center">Autores</h1>
     <table class="table table-info">
         <thead>
             <tr>
-                <th>Nome do Livro</th>
-                <th>Autor do Livro</th>
-                <th>Editora</th>
-                <th>Gênero</th>
-                <th>Preço</th>
-                <th>Data de Publicação</th>
+                <th>Nome</th>
+                <th>Cidade</th>
             </tr>
         </thead>
         <tbody>
-        {% for livros in livros %}
+        {% for autor in autores %}
             <tr>
-                <td><strong>{{ livros.nome }}</strong></td>
-                <td>{{ livros.autor }}</td>
-                <td>{{ livros.editora }}</td>
-                <td>{{ livros.genero }}</td>
-                <td>R$ {{ livros.preco | floatformat:2}}</td>
-                <td>{{ livros.data_plub }}</td>
+                <td><strong>{{ autor.nome }}</strong></td>
+                <td>{{ autor.cidade }}</td>
             </tr>
         {% endfor %}
 
